@@ -1,0 +1,17 @@
+{
+    "name": "junction",
+    "version": "1.0.0",
+    "description": "Platform primitives for junction library.",
+    "homepage": "https://github.com/brandon-kohn/junction",
+    "dependencies": [
+        {
+          "name": "vcpkg-cmake",
+          "host": true
+        },
+        {
+          "name": "vcpkg-cmake-config",
+          "host": true
+        },
+        "turf"
+    ]
+}

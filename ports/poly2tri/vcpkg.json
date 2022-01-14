@@ -1,0 +1,17 @@
+{
+    "name": "poly2tri",
+    "version": "1.0.0",
+    "description": "Mesh generation library.",
+    "homepage": "https://github.com/brandon-kohn/poly2tri",
+    "dependencies": [
+        {
+          "name": "vcpkg-cmake",
+          "host": true
+        },
+        {
+          "name": "vcpkg-cmake-config",
+          "host": true
+        },
+        "exact"
+    ]
+}

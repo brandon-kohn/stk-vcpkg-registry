@@ -1,0 +1,2 @@
+f:\Projects\vcpkg-registry\ports\geometrix
+f:\Projects\vcpkg-registry\ports\simulation_toolkit

@@ -1,0 +1,37 @@
+{
+    "name": "geometrix",
+    "version": "0.9.4",
+    "description": "Expression template geometry library.",
+    "homepage": "https://github.com/brandon-kohn/geometrix",
+    "dependencies": [
+        {
+          "name": "vcpkg-cmake",
+          "host": true
+        },
+        {
+          "name": "vcpkg-cmake-config",
+          "host": true
+        },
+        "boost-assert",
+        "boost-config",
+        "boost-concept-check",
+        "boost-container",
+        "boost-core",
+        "boost-detail",
+        "boost-function",
+        "boost-fusion",
+        "boost-iterator",
+        "boost-move",
+        "boost-mpl",
+        "boost-optional",
+        "boost-predef",
+        "boost-preprocessor",
+        "boost-proto",
+        "boost-range",
+        "boost-smart-ptr",
+        "boost-static-assert",
+        "boost-type-traits",
+        "boost-utility",
+        "boost-variant"
+    ]
+}
