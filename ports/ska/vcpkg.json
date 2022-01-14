@@ -1,7 +1,7 @@
 {
-    "name": "stk",
-    "version": "1.6.2",
-    "description": "Various utilities for simulation work.",
+    "name": "ska",
+    "version": "1.0.0",
+    "description": "Library of header only hash maps.",
     "homepage": "https://github.com/brandon-kohn/simulation_toolkit",
     "dependencies": [
         {
@@ -11,13 +11,6 @@
         {
           "name": "vcpkg-cmake-config",
           "host": true
-        },
-       "stk-core",
-       "exact",
-       "poly2tri",
-       "clipper",
-       "ska",
-       "nlopt",
-       "libcds"
+        }
     ]
 }
