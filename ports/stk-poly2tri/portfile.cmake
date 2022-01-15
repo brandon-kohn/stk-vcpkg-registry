@@ -16,12 +16,12 @@ vcpkg_cmake_install()
 vcpkg_cmake_config_fixup(CONFIG_PATH lib/cmake/poly2tri)
 
 configure_file(
-    ${CMAKE_CURRENT_LIST_DIR}/poly2tri-config.in.cmake
-    ${CURRENT_PACKAGES_DIR}/share/poly2tri/poly2tri-config.cmake
+    ${CMAKE_CURRENT_LIST_DIR}/stk-poly2tri-config.in.cmake
+    ${CURRENT_PACKAGES_DIR}/share/stk-poly2tri/stk-poly2tri-config.cmake
     @ONLY
 )
 file(REMOVE_RECURSE "${CURRENT_PACKAGES_DIR}/debug/include")
 file(REMOVE_RECURSE "${CURRENT_PACKAGES_DIR}/cmake" "${CURRENT_PACKAGES_DIR}/testbed/data")
-file(GLOB HEADER_FILES ${SOURCE_PATH}/poly2tri/*)
-file(INSTALL ${HEADER_FILES} DESTINATION ${CURRENT_PACKAGES_DIR}/include/${PORT})
+#file(GLOB HEADER_FILES ${SOURCE_PATH}/poly2tri/*)
+#file(INSTALL ${HEADER_FILES} DESTINATION ${CURRENT_PACKAGES_DIR}/include/poly2tri)
 file(INSTALL ${SOURCE_PATH}/LICENSE DESTINATION ${CURRENT_PACKAGES_DIR}/share/${PORT} RENAME copyright)

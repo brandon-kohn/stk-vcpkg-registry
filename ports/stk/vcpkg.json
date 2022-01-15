@@ -13,10 +13,12 @@
           "host": true
         },
        "stk-core",
-       "exact",
-       "poly2tri",
-       "clipper",
-       "ska",
+       "stk-exact",
+       "stk-poly2tri",
+       "stk-clipper",
+       "stk-ska",
+       "stk-turf",
+       "stk-junction",
        "nlopt",
        "libcds"
     ]

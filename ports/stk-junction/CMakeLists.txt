@@ -29,13 +29,13 @@ set(JUNCTION_ALL_DLLS "")
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake/modules")
 
 # Add turf targets and import its macros since we use them below
-find_package(turf CONFIG REQUIRED)
+find_package(stk-turf CONFIG REQUIRED)
 
-if(${turf_FOUND})
+if(${stk-turf_FOUND})
    MESSAGE(STATUS "Found turf.")
-else(${turf_FOUND})
+else(${stk-turf_FOUND})
    MESSAGE(FATAL_ERROR "Could not locate turf.")
-endif(${turf_FOUND})
+endif(${stk-turf_FOUND})
 #set(TURF_ROOT ${_VCPKG_INSTALLED_DIR}/${VCPKG_TARGET_TRIPLET}/include)
 #set(TURF_INCLUDE_DIRS ${_VCPKG_INSTALLED_DIR}/${VCPKG_TARGET_TRIPLET}/include/turf)
 #get_filename_component(outerPath "${CMAKE_CURRENT_LIST_DIR}/.." ABSOLUTE)
@@ -179,13 +179,13 @@ endif()
 install ( DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/junction/ DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/junction FILES_MATCHING PATTERN "*.h")
 install ( DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/include/ DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/junction FILES_MATCHING PATTERN "*.h")
 install (TARGETS ${JUNCTION_SHARED_LIBRARY} ${JUNCTION_STATIC_LIBRARY} 
-    EXPORT junction-targets
+    EXPORT stk-junction-targets
     RUNTIME DESTINATION "${CMAKE_INSTALL_BINDIR}" 
     ARCHIVE DESTINATION "${CMAKE_INSTALL_LIBDIR}" 
     LIBRARY DESTINATION "${CMAKE_INSTALL_LIBDIR}")
 
-install ( EXPORT junction-targets 
-          FILE junction-targets.cmake 
+install ( EXPORT stk-junction-targets 
+          FILE stk-junction-targets.cmake 
           NAMESPACE stk:: 
           DESTINATION lib/cmake/junction)
 

@@ -19,8 +19,8 @@ vcpkg_cmake_config_fixup(CONFIG_PATH share/ska)
 file(REMOVE_RECURSE "${CURRENT_PACKAGES_DIR}/debug" "${CURRENT_PACKAGES_DIR}/lib")
 
 configure_file(
-    ${CMAKE_CURRENT_LIST_DIR}/ska-config.in.cmake
-    ${CURRENT_PACKAGES_DIR}/share/ska/ska-config.cmake
+    ${CMAKE_CURRENT_LIST_DIR}/stk-ska-config.in.cmake
+    ${CURRENT_PACKAGES_DIR}/share/stk-ska/stk-ska-config.cmake
     @ONLY
 )
 file(GLOB HEADER_FILES ${SOURCE_PATH}/ska/ska/*)

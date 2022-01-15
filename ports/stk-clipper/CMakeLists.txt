@@ -61,13 +61,13 @@ ENDIF("${isSystemDir}" STREQUAL "-1")
 # Deployment
 install (FILES clipper/clipper.hpp clipper/clipper_export.hpp DESTINATION "${CMAKE_INSTALL_INCLUDEDIR}/clipper")
 install (TARGETS ${CLIPPER_SHARED_LIBRARY} ${CLIPPER_STATIC_LIBRARY}
-         EXPORT clipper-targets
+         EXPORT stk-clipper-targets
          RUNTIME DESTINATION "${CMAKE_INSTALL_BINDIR}"
          ARCHIVE DESTINATION "${CMAKE_INSTALL_LIBDIR}"
          LIBRARY DESTINATION "${CMAKE_INSTALL_LIBDIR}")
 
-install ( EXPORT clipper-targets 
-          FILE clipper-targets.cmake 
+install ( EXPORT stk-clipper-targets 
+          FILE stk-clipper-targets.cmake 
           NAMESPACE stk:: 
           DESTINATION lib/cmake/clipper)
 

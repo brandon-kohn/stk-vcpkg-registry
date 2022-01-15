@@ -1,8 +1,8 @@
 {
-    "name": "clipper",
-    "version": "6.4.2",
-    "description": "Boolean operation library.",
-    "homepage": "https://github.com/brandon-kohn/clipper-lib",
+    "name": "stk-turf",
+    "version": "1.0.0",
+    "description": "Platform primitives for junction library.",
+    "homepage": "https://github.com/brandon-kohn/turf",
     "dependencies": [
         {
           "name": "vcpkg-cmake",

@@ -165,13 +165,13 @@ endif()
 install ( DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/turf/ DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/turf FILES_MATCHING PATTERN "*.h" PATTERN "*.inc")
 install ( DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/include/turf/ DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/turf FILES_MATCHING PATTERN "*.h" PATTERN "*.inc")
 install (TARGETS ${TURF_SHARED_LIBRARY} ${TURF_STATIC_LIBRARY} 
-    EXPORT turf-targets
+    EXPORT stk-turf-targets
     RUNTIME DESTINATION "${CMAKE_INSTALL_BINDIR}" 
     ARCHIVE DESTINATION "${CMAKE_INSTALL_LIBDIR}" 
     LIBRARY DESTINATION "${CMAKE_INSTALL_LIBDIR}")
 
 install ( EXPORT turf-targets 
-          FILE turf-targets.cmake 
+          FILE stk-turf-targets.cmake 
           NAMESPACE stk:: 
           DESTINATION lib/cmake/turf)
 

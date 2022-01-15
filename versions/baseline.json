@@ -1,13 +1,13 @@
 {
 "default": {
-    "clipper": { "baseline": "6.4.2", "port-version": 0 },
+    "stk-clipper": { "baseline": "6.4.2", "port-version": 0 },
     "stk": { "baseline": "1.6.2", "port-version": 0 },
     "stk-core": { "baseline": "1.6.2", "port-version": 0 },
-    "poly2tri": { "baseline": "1.0.0", "port-version": 0 },
-    "exact": { "baseline": "1.0.0", "port-version": 0 },
-    "ska": { "baseline": "1.0.0", "port-version": 0 },
+    "stk-poly2tri": { "baseline": "1.0.0", "port-version": 0 },
+    "stk-exact": { "baseline": "1.0.0", "port-version": 0 },
+    "stk-ska": { "baseline": "1.0.0", "port-version": 0 },
     "geometrix": { "baseline": "0.9.4", "port-version": 0 },
-    "turf": { "baseline": "1.0.0", "port-version": 0 },
-    "junction": { "baseline": "1.0.0", "port-version": 0 }
+    "stk-turf": { "baseline": "1.0.0", "port-version": 0 },
+    "stk-junction": { "baseline": "1.0.0", "port-version": 0 }
 }
 }

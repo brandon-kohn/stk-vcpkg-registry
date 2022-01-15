@@ -1,5 +1,5 @@
 {
-    "name": "exact",
+    "name": "stk-exact",
     "version": "1.0.0",
     "description": "Various utilities for simulation work.",
     "homepage": "https://github.com/brandon-kohn/simulation_toolkit",

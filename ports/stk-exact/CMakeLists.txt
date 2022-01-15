@@ -82,21 +82,21 @@ IF("${isSystemDir}" STREQUAL "-1")
 ENDIF("${isSystemDir}" STREQUAL "-1")
 
 include(CMakePackageConfigHelpers)
-write_basic_package_version_file(${CMAKE_CURRENT_BINARY_DIR}/exact-config-version.cmake VERSION ${VERSION_MAJOR}.${VERSION_MINOR}.${VERSION_PATH} COMPATIBILITY SameMajorVersion )
-install(FILES cmake/exact-config.cmake ${CMAKE_CURRENT_BINARY_DIR}/exact-config-version.cmake DESTINATION ${LIB_INSTALL_DIR}/exact/cmake )
+write_basic_package_version_file(${CMAKE_CURRENT_BINARY_DIR}/stk-exact-config-version.cmake VERSION ${VERSION_MAJOR}.${VERSION_MINOR}.${VERSION_PATH} COMPATIBILITY SameMajorVersion )
+install(FILES cmake/stk-exact-config.cmake ${CMAKE_CURRENT_BINARY_DIR}/stk-exact-config-version.cmake DESTINATION ${LIB_INSTALL_DIR}/exact/cmake )
 
 # Deployment
 install ( DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/exact/
           DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/exact
           FILES_MATCHING PATTERN "*.hpp")
 install (TARGETS ${EXACT_STATIC_LIBRARY} ${EXACT_SHARED_LIBRARY} 
-         EXPORT exact-targets
+         EXPORT stk-exact-targets
          RUNTIME DESTINATION "${CMAKE_INSTALL_BINDIR}"
          ARCHIVE DESTINATION "${CMAKE_INSTALL_LIBDIR}"
          LIBRARY DESTINATION "${CMAKE_INSTALL_LIBDIR}")
 
-install ( EXPORT exact-targets
-          FILE exact-targets.cmake
+install ( EXPORT stk-exact-targets
+          FILE stk-exact-targets.cmake
           NAMESPACE stk::
           DESTINATION lib/cmake/exact)
 

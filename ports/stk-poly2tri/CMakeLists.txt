@@ -86,21 +86,21 @@ IF("${isSystemDir}" STREQUAL "-1")
 ENDIF("${isSystemDir}" STREQUAL "-1")
 
 include(CMakePackageConfigHelpers)
-write_basic_package_version_file(${CMAKE_CURRENT_BINARY_DIR}/poly2tri-config-version.cmake VERSION ${VERSION_MAJOR}.${VERSION_MINOR}.${VERSION_PATH} COMPATIBILITY SameMajorVersion )
-install(FILES cmake/poly2tri-config.cmake ${CMAKE_CURRENT_BINARY_DIR}/poly2tri-config-version.cmake DESTINATION ${LIB_INSTALL_DIR}/poly2tri/cmake )
+write_basic_package_version_file(${CMAKE_CURRENT_BINARY_DIR}/stk-poly2tri-config-version.cmake VERSION ${VERSION_MAJOR}.${VERSION_MINOR}.${VERSION_PATH} COMPATIBILITY SameMajorVersion )
+install(FILES cmake/stk-poly2tri-config.cmake ${CMAKE_CURRENT_BINARY_DIR}/stk-poly2tri-config-version.cmake DESTINATION ${LIB_INSTALL_DIR}/poly2tri/cmake )
 
 # Deployment
 install ( DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/poly2tri
           DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}
           FILES_MATCHING PATTERN "*.h")
 install (TARGETS ${POLY2TRI_STATIC_LIBRARY} ${POLY2TRI_SHARED_LIBRARY}
-         EXPORT poly2tri-targets
+         EXPORT stk-poly2tri-targets
          RUNTIME DESTINATION "${CMAKE_INSTALL_BINDIR}"
          ARCHIVE DESTINATION "${CMAKE_INSTALL_LIBDIR}"
          LIBRARY DESTINATION "${CMAKE_INSTALL_LIBDIR}")
 
-install ( EXPORT poly2tri-targets 
-          FILE poly2tri-targets.cmake 
+install ( EXPORT stk-poly2tri-targets 
+          FILE stk-poly2tri-targets.cmake 
           NAMESPACE stk:: 
           DESTINATION lib/cmake/poly2tri)
 

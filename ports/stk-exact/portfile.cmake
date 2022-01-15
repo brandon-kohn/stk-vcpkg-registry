@@ -16,12 +16,12 @@ vcpkg_cmake_install()
 vcpkg_cmake_config_fixup(CONFIG_PATH lib/cmake/exact)
 
 configure_file(
-    ${CMAKE_CURRENT_LIST_DIR}/exact-config.in.cmake
-    ${CURRENT_PACKAGES_DIR}/share/exact/exact-config.cmake
+    ${CMAKE_CURRENT_LIST_DIR}/stk-exact-config.in.cmake
+    ${CURRENT_PACKAGES_DIR}/share/stk-exact/stk-exact-config.cmake
     @ONLY
 )
 file(REMOVE_RECURSE "${CURRENT_PACKAGES_DIR}/debug/include")
 
-file(GLOB HEADER_FILES ${SOURCE_PATH}/exact/exact/*)
-file(INSTALL ${HEADER_FILES} DESTINATION ${CURRENT_PACKAGES_DIR}/include/${PORT})
+#file(GLOB HEADER_FILES ${SOURCE_PATH}/exact/exact/*)
+#file(INSTALL ${HEADER_FILES} DESTINATION ${CURRENT_PACKAGES_DIR}/include/exact)
 file(INSTALL ${SOURCE_PATH}/exact/LICENSE.md DESTINATION ${CURRENT_PACKAGES_DIR}/share/${PORT} RENAME copyright)

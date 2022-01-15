@@ -1,8 +1,8 @@
 {
-    "name": "turf",
+    "name": "stk-junction",
     "version": "1.0.0",
     "description": "Platform primitives for junction library.",
-    "homepage": "https://github.com/brandon-kohn/turf",
+    "homepage": "https://github.com/brandon-kohn/junction",
     "dependencies": [
         {
           "name": "vcpkg-cmake",
@@ -11,6 +11,7 @@
         {
           "name": "vcpkg-cmake-config",
           "host": true
-        }
+        },
+        "stk-turf"
     ]
 }

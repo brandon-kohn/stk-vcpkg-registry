@@ -1,2 +1,9 @@
 f:\Projects\vcpkg-registry\ports\geometrix
-f:\Projects\vcpkg-registry\ports\simulation_toolkit
+f:\Projects\vcpkg-registry\ports\stk
+f:\Projects\vcpkg-registry\ports\stk-core
+f:\Projects\vcpkg-registry\ports\stk-clipper
+f:\Projects\vcpkg-registry\ports\stk-exact
+f:\Projects\vcpkg-registry\ports\stk-junction
+f:\Projects\vcpkg-registry\ports\stk-poly2tri
+f:\Projects\vcpkg-registry\ports\stk-ska
+f:\Projects\vcpkg-registry\ports\stk-turf
