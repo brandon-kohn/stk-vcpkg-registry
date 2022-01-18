@@ -83,7 +83,7 @@ ENDIF("${isSystemDir}" STREQUAL "-1")
 
 include(CMakePackageConfigHelpers)
 write_basic_package_version_file(${CMAKE_CURRENT_BINARY_DIR}/stk-exact-config-version.cmake VERSION ${VERSION_MAJOR}.${VERSION_MINOR}.${VERSION_PATH} COMPATIBILITY SameMajorVersion )
-install(FILES cmake/stk-exact-config.cmake ${CMAKE_CURRENT_BINARY_DIR}/stk-exact-config-version.cmake DESTINATION ${LIB_INSTALL_DIR}/exact/cmake )
+install(FILES cmake/stk-exact-config.cmake ${CMAKE_CURRENT_BINARY_DIR}/stk-exact-config-version.cmake DESTINATION ${LIB_INSTALL_DIR}/stk-exact/cmake )
 
 # Deployment
 install ( DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/exact/
@@ -98,5 +98,5 @@ install (TARGETS ${EXACT_STATIC_LIBRARY} ${EXACT_SHARED_LIBRARY}
 install ( EXPORT stk-exact-targets
           FILE stk-exact-targets.cmake
           NAMESPACE stk::
-          DESTINATION lib/cmake/exact)
+          DESTINATION lib/cmake/stk-exact)
 

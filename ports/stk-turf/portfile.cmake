@@ -13,7 +13,7 @@ vcpkg_cmake_configure(
     PREFER_NINJA
 )
 vcpkg_cmake_install()
-vcpkg_cmake_config_fixup(CONFIG_PATH lib/cmake/turf)
+vcpkg_cmake_config_fixup(CONFIG_PATH lib/cmake/stk-turf)
 
 configure_file(
     ${CMAKE_CURRENT_LIST_DIR}/stk-turf-config.in.cmake

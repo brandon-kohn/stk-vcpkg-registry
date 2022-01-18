@@ -1,8 +1,8 @@
 vcpkg_from_github(
     OUT_SOURCE_PATH SOURCE_PATH
     REPO brandon-kohn/simulation_toolkit
-    REF 031961f1b4f076e0205174f5143d1aa13747e830
-    SHA512 6e9e3035c52f9ef18de9ee48af75423327dd3f69608d20a820df4c1e0eada38f903c5cf8f8a24675f6480b48699add19ca04c7e1546037e200881242504b116e
+    REF f74b36fbc7d606fa51d754edf26a1f4d8afa0d35
+    SHA512 d42cefdc749c716873b96fff236bf58384adadadb8008ab07b872414888a6601232a00d2276c8eb906da1b1de0f96ee9a9c363776fab739490f6bc4f35846c75
     HEAD_REF master
 )
 
@@ -13,15 +13,8 @@ vcpkg_cmake_configure(
     PREFER_NINJA
 )
 vcpkg_cmake_install()
-vcpkg_cmake_config_fixup(CONFIG_PATH lib/cmake/exact)
+vcpkg_cmake_config_fixup(CONFIG_PATH lib/cmake/stk-exact)
 
-configure_file(
-    ${CMAKE_CURRENT_LIST_DIR}/stk-exact-config.in.cmake
-    ${CURRENT_PACKAGES_DIR}/share/stk-exact/stk-exact-config.cmake
-    @ONLY
-)
 file(REMOVE_RECURSE "${CURRENT_PACKAGES_DIR}/debug/include")
 
-#file(GLOB HEADER_FILES ${SOURCE_PATH}/exact/exact/*)
-#file(INSTALL ${HEADER_FILES} DESTINATION ${CURRENT_PACKAGES_DIR}/include/exact)
 file(INSTALL ${SOURCE_PATH}/exact/LICENSE.md DESTINATION ${CURRENT_PACKAGES_DIR}/share/${PORT} RENAME copyright)

@@ -170,8 +170,8 @@ install (TARGETS ${TURF_SHARED_LIBRARY} ${TURF_STATIC_LIBRARY}
     ARCHIVE DESTINATION "${CMAKE_INSTALL_LIBDIR}" 
     LIBRARY DESTINATION "${CMAKE_INSTALL_LIBDIR}")
 
-install ( EXPORT turf-targets 
+install ( EXPORT stk-turf-targets 
           FILE stk-turf-targets.cmake 
           NAMESPACE stk:: 
-          DESTINATION lib/cmake/turf)
+          DESTINATION lib/cmake/stk-turf)
 

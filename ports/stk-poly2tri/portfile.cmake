@@ -1,8 +1,8 @@
 vcpkg_from_github(
     OUT_SOURCE_PATH SOURCE_PATH
     REPO brandon-kohn/poly2tri
-    REF 868184da34a5bc7dadd40d1643bb03913678186a
-    SHA512 db2cc5b4f6376c917c9d1fbf7498d755236f30f1ff794831e43642bdf8333c303250d08c083a928a3a6fd31326368af73e4d9646d264ce97aa9da5900ccf248e
+    REF 424ffc5f93523dcd2c933b1ff4da2b52ed029439
+    SHA512 7b8ebae4577e6cd3ff53de0ba4041cd657c4230405466f6b005a67f8ac5942d22a67ceb23e24777fff87587b12619c5be518603d1b3aa8784b4749a214513f5d
     HEAD_REF master
 )
 
@@ -13,15 +13,8 @@ vcpkg_cmake_configure(
     PREFER_NINJA
 )
 vcpkg_cmake_install()
-vcpkg_cmake_config_fixup(CONFIG_PATH lib/cmake/poly2tri)
+vcpkg_cmake_config_fixup(CONFIG_PATH lib/cmake/stk-poly2tri)
 
-configure_file(
-    ${CMAKE_CURRENT_LIST_DIR}/stk-poly2tri-config.in.cmake
-    ${CURRENT_PACKAGES_DIR}/share/stk-poly2tri/stk-poly2tri-config.cmake
-    @ONLY
-)
 file(REMOVE_RECURSE "${CURRENT_PACKAGES_DIR}/debug/include")
 file(REMOVE_RECURSE "${CURRENT_PACKAGES_DIR}/cmake" "${CURRENT_PACKAGES_DIR}/testbed/data")
-#file(GLOB HEADER_FILES ${SOURCE_PATH}/poly2tri/*)
-#file(INSTALL ${HEADER_FILES} DESTINATION ${CURRENT_PACKAGES_DIR}/include/poly2tri)
 file(INSTALL ${SOURCE_PATH}/LICENSE DESTINATION ${CURRENT_PACKAGES_DIR}/share/${PORT} RENAME copyright)

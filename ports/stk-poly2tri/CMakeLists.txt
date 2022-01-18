@@ -87,7 +87,7 @@ ENDIF("${isSystemDir}" STREQUAL "-1")
 
 include(CMakePackageConfigHelpers)
 write_basic_package_version_file(${CMAKE_CURRENT_BINARY_DIR}/stk-poly2tri-config-version.cmake VERSION ${VERSION_MAJOR}.${VERSION_MINOR}.${VERSION_PATH} COMPATIBILITY SameMajorVersion )
-install(FILES cmake/stk-poly2tri-config.cmake ${CMAKE_CURRENT_BINARY_DIR}/stk-poly2tri-config-version.cmake DESTINATION ${LIB_INSTALL_DIR}/poly2tri/cmake )
+install(FILES cmake/stk-poly2tri-config.cmake ${CMAKE_CURRENT_BINARY_DIR}/stk-poly2tri-config-version.cmake DESTINATION ${LIB_INSTALL_DIR}/stk-poly2tri/cmake )
 
 # Deployment
 install ( DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/poly2tri
@@ -102,5 +102,5 @@ install (TARGETS ${POLY2TRI_STATIC_LIBRARY} ${POLY2TRI_SHARED_LIBRARY}
 install ( EXPORT stk-poly2tri-targets 
           FILE stk-poly2tri-targets.cmake 
           NAMESPACE stk:: 
-          DESTINATION lib/cmake/poly2tri)
+          DESTINATION lib/cmake/stk-poly2tri)
 
