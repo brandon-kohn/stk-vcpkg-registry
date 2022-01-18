@@ -13,6 +13,7 @@
           "host": true
         },
        "boost-units",
+       "boost-exception",
        "geometrix"
     ]
 }
